@@ -1,16 +1,11 @@
 # ex03
 
-A new Flutter project.
+- Neste exemplo, é criado um layout simples que aprsenta três campos com texto.
 
-## Getting Started
+## Composição da árvore
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Scaffold
+- No body do Scaffold, uma Column
+- Dentro dela, três Rows
+- Dentro de cada Row, um Container
+- Dentro de cada Container, um Text
