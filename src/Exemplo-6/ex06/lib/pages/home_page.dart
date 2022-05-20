@@ -1,8 +1,18 @@
+import 'package:ex06/pageViews/one_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final PageController _controller = PageController();
+
+  int indexBottomNavigationBar = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -11,52 +21,30 @@ class HomePage extends StatelessWidget {
         title: const Center(child: Text("Appbar")),
       ),
 
-      body: Column(
+      body: PageView(
+        controller: _controller,
+
         children: [
-          Container(
-            height: 100,
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-              
-            ),
-
-            child: const Center(
-              child: Text("Texto exemplo", 
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 40.0,
-              ),
-              
-              ),
-            ),
-          ),
-
-          Row(
-            children: [
-              Container(
-                color: Colors.red,
-                height: 100,
-                width: 200,
-                child: const Center(
-                  child: Text("Container 1"),
-                ),
-              ),
-
-              Container(
-                color: Colors.purple,
-                height: 100,
-                width: 200,
-                child: const Center(
-                  child: Text("Container 2"),
-                ),
-              ),
-            ],
-          )
+          const OnePage(),
+          Container(color: Colors.orange,),
+          Container(color: Colors.cyan,),
         ],
       ),
 
-      bottomNavigationBar: BottomNavigationBar(items: const [
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: indexBottomNavigationBar,
+
+        onTap: (int index) {
+          setState(() {
+            indexBottomNavigationBar = index;
+          });
+
+          _controller.animateToPage(index, 
+          duration: const Duration(milliseconds: 300), 
+          curve: Curves.ease);
+        }, 
+        
+        items: const [
 
         BottomNavigationBarItem(
         icon: Icon(Icons.abc),
