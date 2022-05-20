@@ -11,23 +11,49 @@ class HomePage extends StatelessWidget {
         title: const Center(child: Text("Appbar")),
       ),
 
-      body: Container(
-        height: 100,
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-          color: Colors.blue,
-          
-        ),
+      body: Column(
+        children: [
+          Container(
+            height: 100,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              color: Colors.blue,
+              
+            ),
 
-        child: const Center(
-          child: Text("Texto exemplo", 
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 40.0,
+            child: const Center(
+              child: Text("Texto exemplo", 
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 40.0,
+              ),
+              
+              ),
+            ),
           ),
-          
-          ),
-        ),
+
+          Row(
+            children: [
+              Container(
+                color: Colors.red,
+                height: 100,
+                width: 200,
+                child: const Center(
+                  child: Text("Container 1"),
+                ),
+              ),
+
+              Container(
+                color: Colors.purple,
+                height: 100,
+                width: 200,
+                child: const Center(
+                  child: Text("Container 2"),
+                ),
+              ),
+            ],
+          )
+        ],
       ),
 
       bottomNavigationBar: BottomNavigationBar(items: const [
