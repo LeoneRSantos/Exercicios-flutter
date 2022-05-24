@@ -20,6 +20,65 @@ class _HomePageState extends State<HomePage> {
         title: const Center(child: Text("Appbar")),
       ),
 
+      // Menu "sanduíche" que fica na appBar
+      drawer: Drawer(
+        child: ListView(
+
+          children: [
+
+            // Parte que apresenta o nome, email e foto do usuário
+             const UserAccountsDrawerHeader(
+              accountName: Text("Usuário"), 
+              accountEmail: Text("usuario@email.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: Text("U", 
+                  style: TextStyle(fontSize: 25.0, color: Colors.white),),
+              ),
+
+              ),
+
+              ListTile(
+                title: const Text('Item 1'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  _controller.jumpToPage(0);
+                  Navigator.pop(context);
+                  setState(() {
+                    indexBottomNavigationBar = 0;
+                  });
+                }, 
+              ),
+
+              ListTile(
+                title: const Text('Item 2'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  _controller.jumpToPage(1);
+                  Navigator.pop(context);
+                  setState(() {
+                    indexBottomNavigationBar = 1;
+                  });
+                },
+                
+              ),
+
+              ListTile(
+                title: const Text('Item 3'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  _controller.jumpToPage(2);
+                  Navigator.pop(context);
+                  setState(() {
+                    indexBottomNavigationBar = 2;
+                  });
+                },
+              ),
+          ],
+        ),
+
+      ),
+
       body: PageView(
         controller: _controller,
 
