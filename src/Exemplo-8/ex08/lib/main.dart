@@ -67,9 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
   
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            Row(
+              children: [
+                Expanded(child: TextButton(onPressed: _sortearFace, 
+                  child: Image.asset('images/dice${face1+1}.png')
+                  ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
