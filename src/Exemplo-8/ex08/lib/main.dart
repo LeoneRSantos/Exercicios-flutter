@@ -44,14 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
     int face1 = 1;
     int face2 = 1;
     
-  void _incrementCounter() {
+
+
+  void _sortearFace() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
+      face1 = r.nextInt(6);
+      face2 = r.nextInt(6);
     });
   }
 
