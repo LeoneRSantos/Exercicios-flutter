@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -72,13 +73,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(child: TextButton(onPressed: _sortearFace, 
                   child: Image.asset('images/dice${face1+1}.png')
                   ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+                  ),
+                Expanded(child: TextButton(onPressed: _sortearFace, 
+                child: Image.asset('images/dice${face2+1}.png'),) 
+                ), 
+              ],
             ),
+            
           ],
         ),
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
