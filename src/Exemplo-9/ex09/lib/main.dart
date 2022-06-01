@@ -174,7 +174,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ]
                 
               )
-            ],),
+              
+            ],
+            ),
 
             const Text('Jogo Casado', style: TextStyle(fontSize: 35.0, fontFamily: 'Concert-One', color: Colors.white),),
 
