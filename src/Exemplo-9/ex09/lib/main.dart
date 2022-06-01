@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,15 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
-  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -58,9 +59,57 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
             ),
 
+            Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Container(height: 270, width: 65, 
+
+                child: 
+                RotatedBox(
+                  quarterTurns: -1,
+                  child: Center(
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'TIMES',
+                        style: TextStyle(fontFamily: 'Concert-one', fontSize: 50.0),
+                        children: [
+                          WidgetSpan(
+                            child: RotatedBox(quarterTurns: 1),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  ),
+                decoration: BoxDecoration(
+                color: Colors.blue[100],
+              ),
+              ),
+
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Text('Sicranos', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Text('Autoconvidados', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Text('Ziraldos', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Text('Sparrings', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
+                  ),
+                ],
+              )
+            ],),
+
             const Text('Jogo Casado', style: TextStyle(fontSize: 35.0, fontFamily: 'Concert-One', color: Colors.white),),
 
-            Container(height: 100, width: 270, 
+            Container(height: 80, width: 270, 
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.deepPurple),
             child: const Center(child: Text('Iniciar', style: TextStyle(fontFamily: 'Concert-One', fontSize: 35.0, color: Colors.white),)),)
             
