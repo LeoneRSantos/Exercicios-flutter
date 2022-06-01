@@ -104,6 +104,75 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text('Sparrings', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
                   ),
                 ],
+              ),
+
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 0.0),
+                  child: Text('3', style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-one', fontSize: 52.0),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 0.0),
+                  child: Text('3', style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-one', fontSize: 52.0),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 0.0),
+                  child: Text('4', style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-one', fontSize: 52.0),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 0.0),
+                  child: Text('5', style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-one', fontSize: 52.0),),
+                )
+              ],
+              ),
+
+              Column(crossAxisAlignment: CrossAxisAlignment.start, 
+                children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
+                  child: RotatedBox(quarterTurns: -1, 
+                  child: RichText(text: TextSpan(
+                    text: 'jogadores', 
+                    style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-One', fontSize: 12.0)
+                  ),
+                  ),
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
+                  child: RotatedBox(quarterTurns: -1, 
+                  child: RichText(text: TextSpan(
+                    text: 'jogadores', 
+                    style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-One', fontSize: 12.0)
+                  ),
+                  ),
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
+                  child: RotatedBox(quarterTurns: -1, 
+                  child: RichText(text: TextSpan(
+                    text: 'jogadores', 
+                    style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-One', fontSize: 12.0)
+                  ),
+                  ),
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
+                  child: RotatedBox(quarterTurns: -1, 
+                  child: RichText(text: TextSpan(
+                    text: 'jogadores', 
+                    style: TextStyle(color: Colors.deepPurple, fontFamily: 'Concert-One', fontSize: 12.0)
+                  ),
+                  ),
+                  ),
+                ),
+              ]
+                
               )
             ],),
 
