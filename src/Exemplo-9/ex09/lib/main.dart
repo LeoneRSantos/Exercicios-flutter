@@ -182,7 +182,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Container(height: 80, width: 270, 
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.deepPurple),
-            child: const Center(child: Text('Iniciar', style: TextStyle(fontFamily: 'Concert-One', fontSize: 35.0, color: Colors.white),)),)
+            child: const Center(child: Text('Iniciar', style: TextStyle(fontFamily: 'Concert-One', fontSize: 35.0, color: Colors.white),)), 
+            ),
+
+            Row(mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 30.0),
+                  child: Container(
+                    width: 50.0,
+                    height: 50.0,
+                    child: Icon(Icons.add, color: Colors.white,),
+                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.deepPurple),
+                  ),
+                ),
+              ],
+            )
             
           ],
         ),
