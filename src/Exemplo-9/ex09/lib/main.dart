@@ -86,21 +86,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: const [
+                children: const  [
                   Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding: EdgeInsets.all(18.0),
                     child: Text('Sicranos', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding: EdgeInsets.all(18.0),
                     child: Text('Autoconvidados', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding: EdgeInsets.all(18.0),
                     child: Text('Ziraldos', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding: EdgeInsets.all(18.0),
                     child: Text('Sparrings', style: TextStyle(color: Colors.yellow, fontSize: 30.0, fontFamily: 'Concert-One'),),
                   ),
                 ],
