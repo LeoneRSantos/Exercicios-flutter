@@ -63,11 +63,10 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   List<Icon> icones = [
-    Icon(Icons.check, color: Colors.green,), 
-    Icon(Icons.close, color: Colors.red,), 
-    Icon(Icons.check, color: Colors.green,), 
-    Icon(Icons.close, color: Colors.red,)
+    
   ];
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
