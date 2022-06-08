@@ -102,9 +102,9 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  icones.add(Icon(Icons.check));
-                });
+                resposta = true;
+                responder(resposta);
+                
               },
             ),
           ),
