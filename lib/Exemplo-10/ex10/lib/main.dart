@@ -42,10 +42,10 @@ class _QuizPageState extends State<QuizPage> {
                   
       int aux = r.verificaResposta(resposta);
       if (aux == 1) {
-        icones.add(Icon(Icons.check));
+        icones.add(const Icon(Icons.check, color: Colors.green,));
       }
       else{
-        icones.add(Icon(Icons.close));
+        icones.add(Icon(Icons.close, color: Colors.red.shade900,));
       }
 
       p.questaoAtual++;
