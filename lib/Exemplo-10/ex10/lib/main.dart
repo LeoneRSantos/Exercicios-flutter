@@ -10,10 +10,10 @@ class QuizApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Center(child: Text('Quiz', style: TextStyle(color: Colors.black))), backgroundColor: Colors.white,),
+        appBar: AppBar(title: const Center(child: Text('Quiz', style: TextStyle(color: Colors.black))), backgroundColor: Colors.white,),
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: QuizPage(),
           ),
         ),
