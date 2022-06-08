@@ -77,12 +77,12 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           flex: 5,
           child: Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Center(
               child: Text(
                 p.mostrarPergunta(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 25.0,
                 ),
               ),
@@ -91,11 +91,11 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15.0),
             child: FlatButton(
               textColor: Colors.white,
               color: Colors.green,
-              child: Text(
+              child: const Text(
                 'Verdadeiro',
                 style: TextStyle(
                   color: Colors.white,
@@ -112,10 +112,10 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15.0),
             child: FlatButton(
               color: Colors.red.shade900,
-              child: Text(
+              child: const Text(
                 'Falso',
                 style: TextStyle(
                   fontSize: 20.0,
@@ -132,8 +132,8 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Row(
           children: icones,
-        )
-        //TODO: Adicionar uma Row aqui para o marcador de pontos.
+        ),
+        
       ],
     );
   }
