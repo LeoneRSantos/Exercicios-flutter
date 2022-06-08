@@ -1,4 +1,6 @@
+import 'package:ex10/resposta.dart';
 import 'package:flutter/material.dart';
+import 'pergunta.dart';
 
 void main() => runApp(QuizApp());
 
