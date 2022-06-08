@@ -8,6 +8,7 @@ class QuizApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Center(child: Text('Quiz', style: TextStyle(color: Colors.black))), backgroundColor: Colors.white,),
         body: SafeArea(
