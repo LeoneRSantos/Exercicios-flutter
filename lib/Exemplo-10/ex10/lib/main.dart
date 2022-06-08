@@ -28,6 +28,40 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
 
+  Pergunta p = Pergunta();
+  Resposta r = Resposta();
+
+  bool resposta = false;
+
+  int qtdIcones = 0;
+
+  void responder(bool resposta){
+
+    setState(() {
+                  
+      int aux = r.verificaResposta(resposta);
+      if (aux == 1) {
+        icones.add(Icon(Icons.check));
+      }
+      else{
+        icones.add(Icon(Icons.close));
+      }
+
+      p.questaoAtual++;
+      r.respostaAtual++;
+      qtdIcones++;
+
+      verificarIcones();
+    });
+  }
+
+  void verificarIcones(){
+    
+    if (qtdIcones == p.perguntas.length+1) {
+      icones.clear();
+    }
+  }
+
   List<Icon> icones = [
     Icon(Icons.check, color: Colors.green,), 
     Icon(Icons.close, color: Colors.red,), 
