@@ -122,7 +122,9 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                //O usuário clica no botão falso.
+                resposta = false;
+                responder(resposta);
+               
               },
             ),
           ),
