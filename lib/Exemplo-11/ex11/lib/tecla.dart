@@ -5,6 +5,8 @@ class Tecla extends StatelessWidget {
   const Tecla({Key? key, required this.cor}) : super(key: key);
 
   final Color cor;
+  final int numero;
+  final player = AudioPlayer();
 
 
   @override
