@@ -2,7 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class Tecla extends StatelessWidget {
-  const Tecla({Key? key, required this.cor}) : super(key: key);
+  Tecla({Key? key, required this.cor, required this.numero}) : super(key: key);
 
   final Color cor;
   final int numero;
@@ -11,11 +11,12 @@ class Tecla extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(child: Container(
-      color: cor,
-
-      
-    ));
+    return Expanded(
+      child: ElevatedButton(onPressed:(() async{
+        await player.play(AssetSource('sounds/note$numero.wav'));
+      }) , child: Container(color: cor,),
+      ),
+    );
   }
 }
 
