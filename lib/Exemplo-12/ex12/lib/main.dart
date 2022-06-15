@@ -1,18 +1,18 @@
+import 'package:ex12/tela_principal.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(CalculadoraIMC());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
+class CalculadoraIMC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Color(0xFF04040C),
+        scaffoldBackgroundColor: Color(0xFF04040C),
+        accentColor: Colors.amber,
+      ),
+      home: TelaPrincipal(),
     );
   }
 }
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-       
+
         title: const Center(child: Text('Calculadora de IMC')),
       ),
       body: Center(
