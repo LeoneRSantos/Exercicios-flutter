@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CartaoIdadePeso extends StatelessWidget {
-  const CartaoIdadePeso({Key? key}) : super(key: key);
+  const CartaoIdadePeso({Key? key, required this.tipo}) : super(key: key);
+
+  final String tipo;
 
   @override
   Widget build(BuildContext context) {
