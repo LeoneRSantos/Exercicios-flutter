@@ -1,4 +1,7 @@
+import 'package:ex12/cartao_genero.dart';
+import 'package:ex12/cartao_principal.dart';
 import 'package:flutter/material.dart';
+import 'cartao_altura.dart';
 
 class TelaPrincipal extends StatefulWidget {
   @override
