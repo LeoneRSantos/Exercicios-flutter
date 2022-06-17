@@ -36,13 +36,12 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               CartaoPrincipal(conteudo: CartaoIdadePeso(tipo: 'IDADE',)),
               
             ],
-          )
+          ), 
+
+          const BoataoCalcular(),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        child: const Icon(Icons.add),
-      ),
+     
     );
   }
 }
