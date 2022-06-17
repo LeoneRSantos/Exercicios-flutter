@@ -1,4 +1,6 @@
+import 'package:ex12/botao_calcular.dart';
 import 'package:ex12/cartao_genero.dart';
+import 'package:ex12/cartao_idade_peso.dart';
 import 'package:ex12/cartao_principal.dart';
 import 'package:flutter/material.dart';
 import 'cartao_altura.dart';
@@ -17,19 +19,22 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         title: const Center(child: Text('CALCULADORA IMC')),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [ 
           Row(
-            children: [
+            children: const[
               CartaoPrincipal(conteudo: CartaoGenero(icone: Icons.male, genero: 'MASCULINO')),
               CartaoPrincipal(conteudo: CartaoGenero(icone: Icons.female, genero: 'FEMININO')),
             ],
           ),
 
-          CartaoPrincipal(conteudo: CartaoAltura()),
+          const CartaoPrincipal(conteudo: CartaoAltura()),
 
           Row( 
-            children: [ 
-              // TODO: Adicionar aqui os Cartões Idade Peso
+            children: const [ 
+              CartaoPrincipal(conteudo: CartaoIdadePeso(tipo: 'PESO',),),
+              CartaoPrincipal(conteudo: CartaoIdadePeso(tipo: 'IDADE',)),
+              
             ],
           )
         ],
