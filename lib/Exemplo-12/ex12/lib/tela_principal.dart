@@ -13,8 +13,23 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         backgroundColor: const Color(0xFF04040C),
         title: const Center(child: Text('CALCULADORA IMC')),
       ),
-      body: const Center(
-        child: Text('Conteúdo', style: TextStyle(color: Colors.white),),
+      body: Column(
+        children: [ 
+          Row(
+            children: [
+              CartaoPrincipal(conteudo: CartaoGenero(icone: Icons.male, genero: 'MASCULINO')),
+              CartaoPrincipal(conteudo: CartaoGenero(icone: Icons.female, genero: 'FEMININO')),
+            ],
+          ),
+
+          CartaoPrincipal(conteudo: CartaoAltura()),
+
+          Row( 
+            children: [ 
+              // TODO: Adicionar aqui os Cartões Idade Peso
+            ],
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
