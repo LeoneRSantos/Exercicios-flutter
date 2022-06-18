@@ -17,13 +17,28 @@ class _CartaoAlturaState extends State<CartaoAltura> {
     return Column( 
       mainAxisAlignment: MainAxisAlignment.center,
       children: [ 
-        Text('ALTURA', style: TextStyle(fontSize: 20, color: Color(0xFFBABFD3),),), 
+        Text('ALTURA', style: TextStyle(fontSize: 20, color: Colors.white,),), 
         Row( 
           mainAxisAlignment: MainAxisAlignment.center, 
           children: [ 
-          Text('183', style: TextStyle(fontSize: 40, color: Color(0xFFBABFD3),),), 
-          Text('CM', style: TextStyle(color: Color(0xFFBABFD3),),),
-        ],)
+          Text('$_aux', style: TextStyle(fontSize: 40, color: Colors.white,),), 
+          Text('CM', style: TextStyle(color: Colors.white,),),
+        ],
+        ), 
+
+      Slider(
+        value: _valorAtual,
+        activeColor: Colors.white,
+        max: 200,
+        label: _valorAtual.round().toString(),
+        onChanged: (double valor) {
+          setState(() {
+            _valorAtual = valor;
+            _aux = _valorAtual.ceil();
+          });
+        },
+      )
+
       ],
     );
   }
