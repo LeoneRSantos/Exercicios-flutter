@@ -1,6 +1,7 @@
 import 'package:ex12/botao_calcular.dart';
 import 'package:ex12/cartao_genero.dart';
-import 'package:ex12/cartao_idade_peso.dart';
+import 'package:ex12/cartao_idade.dart';
+import 'package:ex12/cartao_peso.dart';
 import 'package:ex12/cartao_principal.dart';
 import 'package:flutter/material.dart';
 import 'cartao_altura.dart';
@@ -31,9 +32,9 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           const CartaoPrincipal(conteudo: CartaoAltura()),
 
           Row( 
-            children: const [ 
-              CartaoPrincipal(conteudo: CartaoIdadePeso(tipo: 'PESO',),),
-              CartaoPrincipal(conteudo: CartaoIdadePeso(tipo: 'IDADE',)),
+            children: [ 
+              CartaoPrincipal(conteudo: CartaoPeso(),),
+              CartaoPrincipal(conteudo: CartaoIdade()),
               
             ],
           ), 
