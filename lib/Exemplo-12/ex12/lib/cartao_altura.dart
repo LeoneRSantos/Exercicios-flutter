@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
-class CartaoAltura extends StatelessWidget {
+class CartaoAltura extends StatefulWidget {
   const CartaoAltura({Key? key}) : super(key: key);
+
+  @override
+  State<CartaoAltura> createState() => _CartaoAlturaState();
+}
+
+class _CartaoAlturaState extends State<CartaoAltura> {
+
+  double _valorAtual = 100.0;
+  int _aux = 100;
 
   @override
   Widget build(BuildContext context) {
