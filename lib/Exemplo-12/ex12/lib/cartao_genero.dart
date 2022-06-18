@@ -11,8 +11,8 @@ class CartaoGenero extends StatelessWidget {
     return Column( 
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icone, size: 50, color: Color(0xFFBABFD3),),
-        Text(genero, style: TextStyle(color: Color(0xFFBABFD3),),),
+        Icon(icone, size: 50, color: Colors.white,),
+        Text(genero, style: TextStyle(color: Colors.white,),),
       ],
     );
   }
