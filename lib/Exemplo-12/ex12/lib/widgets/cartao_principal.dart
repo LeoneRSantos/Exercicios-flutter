@@ -14,7 +14,7 @@ class CartaoPrincipal extends StatelessWidget {
           height: 100,
           child: conteudo,
           decoration: BoxDecoration( 
-            color: Color(0xFF4C5065),
+            color: Color(0xFF252a4e),
             borderRadius: BorderRadius.circular(8),
           ),
         ),
