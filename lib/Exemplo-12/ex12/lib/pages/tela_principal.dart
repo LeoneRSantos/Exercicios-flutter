@@ -39,7 +39,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
             ],
           ), 
 
-          const BoataoCalcular(),
+          const BotaoCalcular(),
         ],
       ),
      
