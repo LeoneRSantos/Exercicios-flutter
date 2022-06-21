@@ -30,8 +30,8 @@ class _CartaoPesoState extends State<CartaoPeso> {
         mainAxisAlignment: MainAxisAlignment.start,
         
         children: [ 
-          Text('PESO', style: const TextStyle(fontSize: 15.0, color: Colors.white),), 
-          Text('$peso', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white)), 
+          Text('PESO', style: const TextStyle(fontSize: 15.0, color: Color(0xFFfdfcfe)),), 
+          Text('$peso', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Color(0xFFfdfcfe))), 
           Row( 
             mainAxisAlignment: MainAxisAlignment.center,
             children: [ 
@@ -41,7 +41,7 @@ class _CartaoPesoState extends State<CartaoPeso> {
                   height: 40,
                   width: 40,
                   child: TextButton(child: Icon(Icons.remove), onPressed: decrementarPeso,),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.0), color: Colors.white),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.0), color: Color(0xFFfdfcfe)),
                 ),
               ),
       
@@ -51,7 +51,7 @@ class _CartaoPesoState extends State<CartaoPeso> {
                   height: 40,
                   width: 40,
                   child: TextButton(child: Icon(Icons.add), onPressed:incrementarPeso),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.0), color: Colors.white),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.0), color: Color(0xFFfdfcfe)),
                 ),
               ),
             ],
