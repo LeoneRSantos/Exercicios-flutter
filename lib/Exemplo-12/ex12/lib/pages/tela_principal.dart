@@ -1,10 +1,10 @@
-import 'package:ex12/botao_calcular.dart';
-import 'package:ex12/cartao_genero.dart';
-import 'package:ex12/cartao_idade.dart';
-import 'package:ex12/cartao_peso.dart';
-import 'package:ex12/cartao_principal.dart';
+import 'package:ex12/widgets/botao_calcular.dart';
+import 'package:ex12/widgets/cartao_genero.dart';
+import 'package:ex12/widgets/cartao_idade.dart';
+import 'package:ex12/widgets/cartao_peso.dart';
+import 'package:ex12/widgets/cartao_principal.dart';
 import 'package:flutter/material.dart';
-import 'cartao_altura.dart';
+import '../widgets/cartao_altura.dart';
 
 class TelaPrincipal extends StatefulWidget {
   @override
@@ -16,7 +16,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF04040C),
+        backgroundColor: const Color(0xFF111639),
         title: const Center(child: Text('CALCULADORA IMC')),
       ),
       body: Column(
