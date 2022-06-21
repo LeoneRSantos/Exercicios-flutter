@@ -1,4 +1,4 @@
-import 'package:ex12/tela_principal.dart';
+import 'package:ex12/pages/tela_principal.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(CalculadoraIMC());
