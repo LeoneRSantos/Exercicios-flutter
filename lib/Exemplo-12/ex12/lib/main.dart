@@ -8,8 +8,8 @@ class CalculadoraIMC extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Color(0xFF04040C),
-        scaffoldBackgroundColor: Color(0xFF04040C),
+        primaryColor: Color(0xFF14163B),
+        scaffoldBackgroundColor: Color(0xFF14163B),
         
       ),
       home: TelaPrincipal(),
