@@ -32,7 +32,7 @@ class _CartaoIdadeState extends State<CartaoIdade> {
         
         children: [ 
           Text('IDADE', style: const TextStyle(fontSize: 15.0, color: Colors.white,),), 
-          Text('$idade', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white)), 
+          Text('$idade', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Color(0xFFfdfcfe))), 
           Row( 
             mainAxisAlignment: MainAxisAlignment.center,
             children: [ 
@@ -42,7 +42,7 @@ class _CartaoIdadeState extends State<CartaoIdade> {
                   height: 40,
                   width: 40,
                   child: TextButton(child: Icon(Icons.remove), onPressed: decrementarIdade,),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.0), color: Colors.white),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.0), color: Color(0xFFfdfcfe)),
                 ),
               ),
       
