@@ -8,7 +8,7 @@ class BoataoCalcular extends StatelessWidget {
     return Container(height: 60, 
       decoration: const BoxDecoration(color: Color(0xFFFD0225),),
       child: TextButton(onPressed: (){},  
-        child: const Text('CALCULAR', style: TextStyle(color: Colors.white),)),
+        child: const Text('CALCULAR', style: TextStyle(color: Color(0xFFfdfcfe)),)),
     );
   }
 }
