@@ -18,13 +18,20 @@ class _CartaoAlturaState extends State<CartaoAltura> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [ 
         Text('ALTURA', style: TextStyle(fontSize: 20, color: Color(0xFFfdfcfe),),), 
-        Row( 
-          mainAxisAlignment: MainAxisAlignment.center, 
-          children: [ 
-          Text('$_aux', style: TextStyle(fontSize: 40, color: Color(0xFFfdfcfe),),), 
-          Text('CM', style: TextStyle(color: Color(0xFFfdfcfe),),),
-        ],
-        ), 
+
+        RichText(
+          textAlign: TextAlign.start,
+          text: TextSpan(
+            
+            // text: 'altura'.toUpperCase(), style: TextStyle(fontSize: 20, color: Color(0xFFfdfcfe),),
+            children: [TextSpan( 
+              text: '$_aux', style: TextStyle(fontSize: 40, color: Color(0xFFfdfcfe),), 
+            ), 
+            
+            TextSpan(text: 'CM', style: TextStyle(color: Color(0xFFfdfcfe), fontSize: 18),),
+            ]
+          )
+          ),
 
       Slider(
         value: _valorAtual,
