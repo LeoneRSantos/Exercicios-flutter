@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CartaoAltura extends StatefulWidget {
-  const CartaoAltura({Key? key}) : super(key: key);
+  CartaoAltura({Key? key, required this.altura, required this.alteraValor}) : super(key: key);
+
+  final int altura;
+  final void Function(double) alteraValor;
 
   @override
   State<CartaoAltura> createState() => _CartaoAlturaState();
@@ -9,8 +12,6 @@ class CartaoAltura extends StatefulWidget {
 
 class _CartaoAlturaState extends State<CartaoAltura> {
 
-  double _valorAtual = 100.0;
-  int _aux = 100;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class _CartaoAlturaState extends State<CartaoAltura> {
             
             // text: 'altura'.toUpperCase(), style: TextStyle(fontSize: 20, color: Color(0xFFfdfcfe),),
             children: [TextSpan( 
-              text: '$_aux', style: TextStyle(fontSize: 40, color: Color(0xFFfdfcfe),), 
+              text: '${widget.altura} ', style: TextStyle(fontSize: 40, color: Color(0xFFfdfcfe),), 
             ), 
             
             TextSpan(text: 'CM', style: TextStyle(color: Color(0xFFfdfcfe), fontSize: 18),),
@@ -34,15 +35,14 @@ class _CartaoAlturaState extends State<CartaoAltura> {
           ),
 
       Slider(
-        value: _valorAtual,
+        value: widget.altura.toDouble(),
         activeColor: Color(0xFFfffeff),
         thumbColor: Color(0xFFFD0225),
         max: 200,
-        label: _valorAtual.round().toString(),
+        label: widget.altura.toDouble().round().toString(),
         onChanged: (double valor) {
           setState(() {
-            _valorAtual = valor;
-            _aux = _valorAtual.ceil();
+            widget.alteraValor(valor);
           });
         },
       )
