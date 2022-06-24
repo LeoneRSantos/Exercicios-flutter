@@ -1,11 +1,59 @@
 import 'package:ex12/widgets/botao_calcular.dart';
 import 'package:ex12/widgets/botao_recalcular.dart';
 import 'package:ex12/widgets/cartao_principal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class TelaResultado extends StatelessWidget {
-  const TelaResultado({Key? key}) : super(key: key);
+  TelaResultado({Key? key, required this.imc}) : super(key: key);
+
+  final double imc;
+  TextStyle criaEstiloTexto(Color cor){
+    return TextStyle(color: cor, fontWeight: FontWeight.bold, fontSize: 30);
+  }
+
+  // TODO texto
+  String msg = '';
+
+  Text classificacaoIMC() {
+    if (imc < 18.5) {
+      msg = 'DÁ PRA COMER MAIS UM TIQUIN';
+      return Text(
+        'MAGREZA',
+        style: criaEstiloTexto(Colors.green),
+      );
+    } else if (imc >= 18.5 && imc < 25.0) {
+      msg = 'TÁ NICE';
+      return Text(
+        'NORMAL',
+        style: criaEstiloTexto(Colors.green),
+      );
+    } else if (imc >= 25.0 && imc < 30.0) {
+      msg = 'TA ENGORDANDO AE';
+      return Text(
+        'SOBREPESO',
+        style: criaEstiloTexto(Colors.yellow),
+      );
+    } else if (imc >= 30.0 && imc < 40.0) {
+      msg = 'TA GORDO PRA PORRA BICHO';
+      return Text(
+        'OBESIDADE',
+        style: criaEstiloTexto(Colors.orange),
+      );
+    } else if (imc >= 40.0) {
+      msg = 'VAI DE BASE JAJA';
+      return Text(
+        'OBSESIDADE GRAVE',
+        style: criaEstiloTexto(Colors.red),
+      );
+    } else {
+      return Text(
+        'WTF',
+        style: criaEstiloTexto(Colors.blue),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +76,10 @@ class TelaResultado extends StatelessWidget {
           CartaoPrincipal(conteudo: Column( 
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [ 
-              Text('Categoria'.toUpperCase(), 
-                style: TextStyle(color: Color(0xFF77e889), fontSize: 20.0,)), 
-              Text('22.1', 
+              classificacaoIMC(),
+              Text(imc.toStringAsFixed(1), 
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 60.0, color: Color(0xFFfffeff)),),  
-              Text('Explicação', 
+              Text(msg, 
                 style: TextStyle(fontSize: 20.0, color: Color(0xFFfffeff)),),
 
             ],
