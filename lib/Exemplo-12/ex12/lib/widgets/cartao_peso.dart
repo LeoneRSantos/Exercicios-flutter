@@ -13,19 +13,7 @@ class CartaoPeso extends StatefulWidget {
 }
 
 class _CartaoPesoState extends State<CartaoPeso> {
-  int peso = 60;
  
-  void incrementarPeso(){
-    setState(() {
-      peso++;
-    });
-  }
- 
-  void decrementarPeso(){
-    setState(() {
-      peso--;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
