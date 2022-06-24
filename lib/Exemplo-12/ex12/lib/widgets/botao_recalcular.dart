@@ -9,9 +9,7 @@ class BotaoReCalcular extends StatelessWidget {
     return Container(height: 60, 
       decoration: const BoxDecoration(color: Color(0xFFFD0225),),
       child: TextButton(onPressed: (){
-        Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => TelaPrincipal()),
-        );
+        Navigator.of(context).pop();
       },  
         child: Text('re-calcular'.toUpperCase(), style: TextStyle(color: Color(0xFFfdfcfe)),)),
     );
