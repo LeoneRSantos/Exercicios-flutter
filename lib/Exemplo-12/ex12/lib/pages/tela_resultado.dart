@@ -9,7 +9,7 @@ class TelaResultado extends StatelessWidget {
   TelaResultado({Key? key, required this.imc}) : super(key: key);
 
   final double imc;
-  TextStyle criaEstiloTexto(Color cor){
+  TextStyle criarEstiloTexto(Color cor){
     return TextStyle(color: cor, fontWeight: FontWeight.bold, fontSize: 30);
   }
 
@@ -18,39 +18,39 @@ class TelaResultado extends StatelessWidget {
 
   Text classificacaoIMC() {
     if (imc < 18.5) {
-      msg = 'DÁ PRA COMER MAIS UM TIQUIN';
+      msg = 'Procure comer mais e ter uma alimentação balanceada.';
       return Text(
         'MAGREZA',
-        style: criaEstiloTexto(Colors.green),
+        style: criarEstiloTexto(Colors.green),
       );
     } else if (imc >= 18.5 && imc < 25.0) {
-      msg = 'TÁ NICE';
+      msg = 'Excelente! Continue com sua alimentação e exercícios físicos.';
       return Text(
         'NORMAL',
-        style: criaEstiloTexto(Colors.green),
+        style: criarEstiloTexto(Colors.green),
       );
     } else if (imc >= 25.0 && imc < 30.0) {
-      msg = 'TA ENGORDANDO AE';
+      msg = 'Procure um nutricionista para orientações.';
       return Text(
         'SOBREPESO',
-        style: criaEstiloTexto(Colors.yellow),
+        style: criarEstiloTexto(Colors.yellow),
       );
     } else if (imc >= 30.0 && imc < 40.0) {
-      msg = 'TA GORDO PRA PORRA BICHO';
+      msg = 'Procure orientação médica e um nutricionista.';
       return Text(
         'OBESIDADE',
-        style: criaEstiloTexto(Colors.orange),
+        style: criarEstiloTexto(Colors.orange),
       );
     } else if (imc >= 40.0) {
-      msg = 'VAI DE BASE JAJA';
+      msg = 'Cuidado! Procure orientação médica urgentemente.';
       return Text(
         'OBSESIDADE GRAVE',
-        style: criaEstiloTexto(Colors.red),
+        style: criarEstiloTexto(Colors.red),
       );
     } else {
       return Text(
-        'WTF',
-        style: criaEstiloTexto(Colors.blue),
+        '',
+        style: criarEstiloTexto(Colors.blue),
       );
     }
   }
