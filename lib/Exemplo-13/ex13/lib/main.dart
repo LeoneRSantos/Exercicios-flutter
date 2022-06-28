@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:ex13/fato_de_gato.dart';
 import 'package:flutter/material.dart';
 
+import 'package:dio/dio.dart';
+
 void main() {
   runApp(const MyApp());
 }
