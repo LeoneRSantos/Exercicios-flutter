@@ -51,10 +51,21 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
+      
+      body: FutureBuilder( 
+        future: Dio().get('https://catfact.ninja/fact'), 
+        builder: (BuildContext context, AsyncSnapshot<Response<dynamic>> snapshot){
+          
+          // Se o snapshot tem dados dentro dele
+          if(snapshot.hasData){ 
+            Response? resposta = snapshot.data;
+
+            // Caso dê certo, retorna o resultado
+            if(resposta?.statusCode == 200){
+              FatoDeGato fato = FatoDeGato.fromJson(resposta?.data);
+
+              return Center(
+                child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -69,23 +80,35 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text(
+                      'Fato de gato obtido a partir da API:', style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('${fato.fact!}', textAlign: TextAlign.center ,style: const TextStyle(fontSize: 16.0, color: Colors.purple),),
+                    ),
+                  ],
+                ),
+              );
+            }
+
+            // Caso não dê certo
+            else{
+              return Text('${resposta?.statusMessage}');
+            }
+
+          }
+
+          else if (snapshot.hasError){
+            return Text('Falha na conexão: ${snapshot.error}');
+          }
+
+          return const Center(child: CircularProgressIndicator(color: Colors.purple));
+          
+        })
+    
+  );
   }
 }
